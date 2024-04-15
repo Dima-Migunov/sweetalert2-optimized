@@ -135,16 +135,20 @@ const focusable = `
  */
 export const getFocusableElements = () => {
   const popup = getPopup()
+
   if (!popup) {
     return []
   }
+
   /** @type {NodeListOf<HTMLElement>} */
   const focusableElementsWithTabindex = popup.querySelectorAll('[tabindex]:not([tabindex="-1"]):not([tabindex="0"])')
+
   const focusableElementsWithTabindexSorted = Array.from(focusableElementsWithTabindex)
     // sort according to tabindex
     .sort((a, b) => {
       const tabindexA = parseInt(a.getAttribute('tabindex') || '0')
       const tabindexB = parseInt(b.getAttribute('tabindex') || '0')
+
       if (tabindexA > tabindexB) {
         return 1
       } else if (tabindexA < tabindexB) {
@@ -180,10 +184,8 @@ export const isModal = () => {
  */
 export const isToast = () => {
   const popup = getPopup()
-  if (!popup) {
-    return false
-  }
-  return hasClass(popup, swalClasses.toast)
+
+  return popup ? hasClass(popup, swalClasses.toast) : false
 }
 
 /**
@@ -191,8 +193,6 @@ export const isToast = () => {
  */
 export const isLoading = () => {
   const popup = getPopup()
-  if (!popup) {
-    return false
-  }
-  return popup.hasAttribute('data-loading')
+
+  return popup ? popup.hasAttribute('data-loading') : false
 }

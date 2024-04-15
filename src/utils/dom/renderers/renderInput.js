@@ -131,17 +131,21 @@ const setInputPlaceholder = (input, params) => {
  * @param {SweetAlertOptions} params
  */
 const setInputLabel = (input, prependTo, params) => {
-  if (params.inputLabel) {
-    const label = document.createElement('label')
-    const labelClass = swalClasses['input-label']
-    label.setAttribute('for', input.id)
-    label.className = labelClass
-    if (typeof params.customClass === 'object') {
-      dom.addClass(label, params.customClass.inputLabel)
-    }
-    label.innerText = params.inputLabel
-    prependTo.insertAdjacentElement('beforebegin', label)
+  if (!params.inputLabel) {
+    return
   }
+
+  const label = document.createElement('label')
+  const labelClass = swalClasses['input-label']
+  label.setAttribute('for', input.id)
+  label.className = labelClass
+
+  if (typeof params.customClass === 'object') {
+    dom.addClass(label, params.customClass.inputLabel)
+  }
+
+  label.innerText = params.inputLabel
+  prependTo.insertAdjacentElement('beforebegin', label)
 }
 
 /**

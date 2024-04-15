@@ -8,11 +8,14 @@ import * as dom from '../utils/dom/index.js'
 function hideLoading() {
   // do nothing if popup is closed
   const innerParams = privateProps.innerParams.get(this)
+
   if (!innerParams) {
     return
   }
+
   const domCache = privateProps.domCache.get(this)
   dom.hide(domCache.loader)
+
   if (dom.isToast()) {
     if (innerParams.icon) {
       dom.show(dom.getIcon())
@@ -20,6 +23,7 @@ function hideLoading() {
   } else {
     showRelatedButton(domCache)
   }
+
   dom.removeClass([domCache.popup, domCache.actions], swalClasses.loading)
   domCache.popup.removeAttribute('aria-busy')
   domCache.popup.removeAttribute('data-loading')

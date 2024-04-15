@@ -22,17 +22,21 @@ export const iOSfix = () => {
  */
 const lockBodyScroll = () => {
   const container = dom.getContainer()
+
   if (!container) {
     return
   }
+
   /** @type {boolean} */
   let preventTouchMove
+
   /**
    * @param {TouchEvent} event
    */
   container.ontouchstart = (event) => {
     preventTouchMove = shouldPreventTouchMove(event)
   }
+
   /**
    * @param {TouchEvent} event
    */
@@ -52,15 +56,19 @@ const shouldPreventTouchMove = (event) => {
   const target = event.target
   const container = dom.getContainer()
   const htmlContainer = dom.getHtmlContainer()
+
   if (!container || !htmlContainer) {
     return false
   }
+
   if (isStylus(event) || isZoom(event)) {
     return false
   }
+
   if (target === container) {
     return true
   }
+
   if (
     !dom.isScrollable(container) &&
     target instanceof HTMLElement &&
@@ -73,6 +81,7 @@ const shouldPreventTouchMove = (event) => {
   ) {
     return true
   }
+
   return false
 }
 

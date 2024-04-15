@@ -29,6 +29,7 @@ export const replaceScrollbarWithPadding = (initialBodyOverflow) => {
   if (previousBodyPadding !== null) {
     return
   }
+
   // if the body has overflow
   if (
     document.body.scrollHeight > window.innerHeight ||

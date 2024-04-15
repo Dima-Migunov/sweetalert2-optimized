@@ -1,5 +1,5 @@
 <a href="https://sweetalert2.github.io/">
-  <img src="./assets/swal2-logo.png" width="498" alt="SweetAlert2">
+  <img src="https://raw.githubusercontent.com/sweetalert2/sweetalert2/main/assets/swal2-logo.png" width="498" alt="SweetAlert2">
 </a>
 
 # NO vulnerabilities

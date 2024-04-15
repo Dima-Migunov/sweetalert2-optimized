@@ -9,8 +9,6 @@ import * as dom from '../utils/dom/index.js'
 export function getInput() {
   const innerParams = privateProps.innerParams.get(this)
   const domCache = privateProps.domCache.get(this)
-  if (!domCache) {
-    return null
-  }
-  return dom.getInput(domCache.popup, innerParams.input)
+
+  return domCache ? dom.getInput(domCache.popup, innerParams.input) : null
 }
