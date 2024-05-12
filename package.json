@@ -1,6 +1,6 @@
 {
   "name": "sweetalert2-optimized",
-  "version": "11.10.8",
+  "version": "11.11.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dima-Migunov/sweetalert2-optimized.git"
@@ -20,7 +20,7 @@
     "@sweetalert2/stylelint-config": "^3.0.0",
     "cypress": "^13.0.0",
     "eslint": "^8.24.0",
-    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-cypress": "^3.0.0",
     "eslint-plugin-jsdoc": "^48.0.0",
     "eslint-plugin-no-unsanitized": "^4.0.1",
     "jquery": "^3.6.1",
@@ -31,7 +31,7 @@
     "stylelint": "^16.0.0",
     "typescript": "4.7.4",
     "vite": "^5.0.0",
-    "zx": "^7.1.1"
+    "zx": "^8.0.0"
   },
   "devDependenciesComments": {
     "typescript": "Do not upgrade TS, tests will verify that types work with the very first version of TS >= 4.0"
