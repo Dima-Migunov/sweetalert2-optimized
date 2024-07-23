@@ -65,6 +65,10 @@ const showInput = (params) => {
   }
 
   const inputContainer = getInputContainer(params.input)
+  if (!inputContainer) {
+    return
+  }
+
   const input = renderInputType[params.input](inputContainer, params)
   dom.show(inputContainer)
 
@@ -93,7 +97,12 @@ const removeAttributes = (input) => {
  * @param {SweetAlertOptions['inputAttributes']} inputAttributes
  */
 const setAttributes = (inputClass, inputAttributes) => {
-  const input = dom.getInput(dom.getPopup(), inputClass)
+  const popup = dom.getPopup()
+  if (!popup) {
+    return
+  }
+
+  const input = dom.getInput(popup, inputClass)
   if (!input) {
     return
   }
@@ -109,9 +118,12 @@ const setAttributes = (inputClass, inputAttributes) => {
  * @param {SweetAlertOptions} params
  */
 const setCustomClass = (params) => {
+  if (!params.input) {
+    return
+  }
   const inputContainer = getInputContainer(params.input)
-  if (typeof params.customClass === 'object') {
-    dom.addClass(inputContainer, params.customClass.input)
+  if (inputContainer) {
+    dom.applyCustomClass(inputContainer, params, 'input')
   }
 }
 
@@ -120,7 +132,7 @@ const setCustomClass = (params) => {
  * @param {SweetAlertOptions} params
  */
 const setInputPlaceholder = (input, params) => {
-  if (!input.placeholder || params.inputPlaceholder) {
+  if (!input.placeholder && params.inputPlaceholder) {
     input.placeholder = params.inputPlaceholder
   }
 }
@@ -131,29 +143,30 @@ const setInputPlaceholder = (input, params) => {
  * @param {SweetAlertOptions} params
  */
 const setInputLabel = (input, prependTo, params) => {
-  if (!params.inputLabel) {
-    return
+  if (params.inputLabel) {
+    const label = document.createElement('label')
+    const labelClass = swalClasses['input-label']
+    label.setAttribute('for', input.id)
+    label.className = labelClass
+    if (typeof params.customClass === 'object') {
+      dom.addClass(label, params.customClass.inputLabel)
+    }
+    label.innerText = params.inputLabel
+    prependTo.insertAdjacentElement('beforebegin', label)
   }
-
-  const label = document.createElement('label')
-  const labelClass = swalClasses['input-label']
-  label.setAttribute('for', input.id)
-  label.className = labelClass
-
-  if (typeof params.customClass === 'object') {
-    dom.addClass(label, params.customClass.inputLabel)
-  }
-
-  label.innerText = params.inputLabel
-  prependTo.insertAdjacentElement('beforebegin', label)
 }
 
 /**
- * @param {SweetAlertOptions['input']} inputType
- * @returns {HTMLElement}
+ * @param {SweetAlertInput} inputType
+ * @returns {HTMLElement | undefined}
  */
 const getInputContainer = (inputType) => {
-  return dom.getDirectChildByClass(dom.getPopup(), swalClasses[inputType] || swalClasses.input)
+  const popup = dom.getPopup()
+  if (!popup) {
+    return
+  }
+
+  return dom.getDirectChildByClass(popup, swalClasses[/** @type {SwalClass} */ (inputType)] || swalClasses.input)
 }
 
 /**
@@ -188,6 +201,7 @@ renderInputType.text =
   renderInputType.time =
   renderInputType.week =
   renderInputType.month =
+    /** @type {(input: Input | HTMLElement, params: SweetAlertOptions) => Input} */
     (input, params) => {
       checkAndSetInputValue(input, params.inputValue)
       setInputLabel(input, input, params)

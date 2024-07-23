@@ -1,3 +1,55 @@
+## [11.12.3](https://github.com/sweetalert2/sweetalert2/compare/v11.12.2...v11.12.3) (2024-07-19)
+
+### Bug Fixes
+
+- strict types renderInput.js and getTemplateParams.js ([df6d0ed](https://github.com/sweetalert2/sweetalert2/commit/df6d0ed1ca1b6cbc947e5ef7cdb3bfdddf50ab67))
+
+## [11.12.2](https://github.com/sweetalert2/sweetalert2/compare/v11.12.1...v11.12.2) (2024-07-05)
+
+### Bug Fixes
+
+- `customClass` for buttons ([#2741](https://github.com/sweetalert2/sweetalert2/issues/2741)) ([87201a0](https://github.com/sweetalert2/sweetalert2/commit/87201a06c351ed467280892828c731caf02477b1))
+
+## [11.12.1](https://github.com/sweetalert2/sweetalert2/compare/v11.12.0...v11.12.1) (2024-06-28)
+
+### Bug Fixes
+
+- strict types domUtils.js ([42720b4](https://github.com/sweetalert2/sweetalert2/commit/42720b4369d00370fa2f3934520f1b013bb6f090))
+
+# [11.12.0](https://github.com/sweetalert2/sweetalert2/compare/v11.11.1...v11.12.0) (2024-06-18)
+
+### Bug Fixes
+
+- **styles:** :focus -> :focus-visible for buttons ([#2733](https://github.com/sweetalert2/sweetalert2/issues/2733)) ([9be8249](https://github.com/sweetalert2/sweetalert2/commit/9be8249e518d0bc82d5171f5671c17c43288b25c))
+
+### Features
+
+- focus `[autofocus]` element in a popup ([#2736](https://github.com/sweetalert2/sweetalert2/issues/2736)) ([52fedf3](https://github.com/sweetalert2/sweetalert2/commit/52fedf32e7c393e2ac30fbd29a269a49e1f1c07c))
+
+## [11.11.1](https://github.com/sweetalert2/sweetalert2/compare/v11.11.0...v11.11.1) (2024-06-05)
+
+### Bug Fixes
+
+- **types:** getSwalImage() ([e0e5e4c](https://github.com/sweetalert2/sweetalert2/commit/e0e5e4c4d806d2fe36b258926cf8f0f9a6177fd8))
+
+# [11.11.0](https://github.com/sweetalert2/sweetalert2/compare/v11.10.8...v11.11.0) (2024-05-11)
+
+### Features
+
+- **types:** allow `undefined` as options ([#2728](https://github.com/sweetalert2/sweetalert2/issues/2728)) ([0d6f0ec](https://github.com/sweetalert2/sweetalert2/commit/0d6f0ecb253d7e4422e987a185648bee977310e1))
+
+## [11.10.8](https://github.com/sweetalert2/sweetalert2/compare/v11.10.7...v11.10.8) (2024-04-17)
+
+### Bug Fixes
+
+- prevent popup content from being selected on double click on the container ([#2722](https://github.com/sweetalert2/sweetalert2/issues/2722)) ([7910325](https://github.com/sweetalert2/sweetalert2/commit/79103251ddbc664171cc6538320d57ca72a36a89))
+
+## [11.10.7](https://github.com/sweetalert2/sweetalert2/compare/v11.10.6...v11.10.7) (2024-03-22)
+
+### Bug Fixes
+
+- improve performance by pulling querySelector out of the loop ([#2719](https://github.com/sweetalert2/sweetalert2/issues/2719)) ([9f94517](https://github.com/sweetalert2/sweetalert2/commit/9f9451789d1efab3f0dc5a7f841af0f17619b2f4))
+
 ## [11.10.6](https://github.com/sweetalert2/sweetalert2/compare/v11.10.5...v11.10.6) (2024-03-05)
 
 ### Bug Fixes
