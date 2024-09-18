@@ -1,3 +1,40 @@
+# [11.14.0](https://github.com/sweetalert2/sweetalert2/compare/v11.13.3...v11.14.0) (2024-09-09)
+
+### Features
+
+- add global events `.on()` `.off()` `.once()` ([#2763](https://github.com/sweetalert2/sweetalert2/issues/2763)) ([60dabc1](https://github.com/sweetalert2/sweetalert2/commit/60dabc13a790fc04c624b70bc1e6c6ca01386151))
+
+## [11.13.3](https://github.com/sweetalert2/sweetalert2/compare/v11.13.2...v11.13.3) (2024-09-07)
+
+### Bug Fixes
+
+- checkbox label = inputPlaceholder || inputLabel ([#2761](https://github.com/sweetalert2/sweetalert2/issues/2761)) ([e783864](https://github.com/sweetalert2/sweetalert2/commit/e78386406bad7d703b1e4db3d0c078f7bcb029aa))
+
+## [11.13.2](https://github.com/sweetalert2/sweetalert2/compare/v11.13.1...v11.13.2) (2024-09-04)
+
+### Bug Fixes
+
+- add transform-optional-chaining and transform-class-properties babel plugins to make webpack 4 happy ([55bdf07](https://github.com/sweetalert2/sweetalert2/commit/55bdf07152a5aa147ed00787d1079fb618bee9fc)), closes [/github.com/sweetalert2/sweetalert2/pull/2759#issuecomment-2328739992](https://github.com//github.com/sweetalert2/sweetalert2/pull/2759/issues/issuecomment-2328739992)
+- set babel browser targets to default targets ([#2759](https://github.com/sweetalert2/sweetalert2/issues/2759)) ([270baa7](https://github.com/sweetalert2/sweetalert2/commit/270baa7b0b02cb70b34bf7d4ca343e290aa2fd8f))
+
+## [11.13.1](https://github.com/sweetalert2/sweetalert2/compare/v11.13.0...v11.13.1) (2024-09-03)
+
+### Bug Fixes
+
+- esm module export ([29082b5](https://github.com/sweetalert2/sweetalert2/commit/29082b54353abbb16a1161a2de2211587f6428a6))
+
+# [11.13.0](https://github.com/sweetalert2/sweetalert2/compare/v11.12.4...v11.13.0) (2024-09-03)
+
+### Features
+
+- publish .esm.js ([#2757](https://github.com/sweetalert2/sweetalert2/issues/2757)) ([e6537e5](https://github.com/sweetalert2/sweetalert2/commit/e6537e5ed6a6309a2947f877002db60e47fc6978))
+
+## [11.12.4](https://github.com/sweetalert2/sweetalert2/compare/v11.12.3...v11.12.4) (2024-08-01)
+
+### Bug Fixes
+
+- upgrade to eslint 9 ([#2748](https://github.com/sweetalert2/sweetalert2/issues/2748)) ([6696b81](https://github.com/sweetalert2/sweetalert2/commit/6696b81f40584268c66025b0a57d444c087d5287))
+
 ## [11.12.3](https://github.com/sweetalert2/sweetalert2/compare/v11.12.2...v11.12.3) (2024-07-19)
 
 ### Bug Fixes
