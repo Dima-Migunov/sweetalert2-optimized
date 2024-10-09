@@ -1,6 +1,6 @@
 {
   "name": "sweetalert2-optimized",
-  "version": "11.14.1",
+  "version": "11.14.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dima-Migunov/sweetalert2-optimized.git"
@@ -73,6 +73,5 @@
     "trailingComma": "es5"
   },
   "bugs": "https://github.com/sweetalert2/sweetalert2/issues",
-  "license": "MIT",
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  "license": "MIT"
 }
