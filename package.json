@@ -1,6 +1,6 @@
 {
   "name": "sweetalert2-optimized",
-  "version": "11.14.3",
+  "version": "11.14.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dima-Migunov/sweetalert2-optimized.git"
@@ -20,7 +20,7 @@
     "@sweetalert2/stylelint-config": "^3.0.0",
     "cypress": "^13.0.0",
     "eslint": "^9.0.0",
-    "eslint-plugin-cypress": "^3.0.0",
+    "eslint-plugin-cypress": "^4.0.0",
     "eslint-plugin-jsdoc": "^50.0.0",
     "eslint-plugin-no-unsanitized": "^4.0.1",
     "jquery": "^3.6.1",
