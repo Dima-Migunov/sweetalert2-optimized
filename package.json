@@ -1,6 +1,6 @@
 {
   "name": "sweetalert2-optimized",
-  "version": "11.14.4",
+  "version": "11.14.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dima-Migunov/sweetalert2-optimized.git"
@@ -61,7 +61,7 @@
     "lint": "stylelint src/**/*.scss && eslint src cypress *.js *.ts && prettier --check src/**/*.js cypress/**/*.js *.js",
     "build": "zx tools/build.mjs",
     "test": "cypress run --headless",
-    "check-types": "npx -p typescript@latest tsc --noEmit -p jsconfig.json",
+    "check-types": "npx -p typescript@latest tsc --noEmit --lib dom,es2018 -p jsconfig.json",
     "cypress:open": "cypress open",
     "webpack-build": "webpack --config=test/webpack/webpack.config.js"
   },
